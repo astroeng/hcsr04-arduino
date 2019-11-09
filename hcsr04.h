@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-#define DEBUG(x) //x
+#define DEBUG(x) x
 
 #define HCSR04__SAMPLE_SIZE  16
 #define HCSR04__SAMPLE_COUNT 6
@@ -45,6 +45,7 @@ private:
 
     volatile unsigned long pulseStart = 0;
     volatile unsigned long pulseEnd = 1;
+    volatile unsigned long pulseDuration = 0;
 
     volatile bool pulseHappened = false;
 
